@@ -1,10 +1,10 @@
-# Cloudflare Pages — static PlayCanvas site (no Worker script).
-# Dashboard Deploy command MUST be pages deploy, not `wrangler deploy`.
-# Recommended dashboard settings:
-#   Build command: (empty)
-#   Deploy command: npx wrangler pages deploy .
-#   OR clear Deploy command and set Output directory to /
+# Cloudflare deploy config for static PlayCanvas site.
+# Your dashboard currently runs: npx wrangler deploy
+# That command requires [assets] (Workers static assets).
 
 name = "table-visualization"
 compatibility_date = "2024-10-01"
-pages_build_output_dir = "."
+
+[assets]
+directory = "."
+html_handling = "auto-trailing-slash"
