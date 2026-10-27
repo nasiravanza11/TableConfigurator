@@ -1,0 +1,14 @@
+node_modules/
+.wrangler/
+.git/
+.gitignore
+.cfignore
+.assetsignore
+.cursor/
+*.log
+.DS_Store
+.cache/
+.dev.vars
+package.json
+package-lock.json
+wrangler.toml

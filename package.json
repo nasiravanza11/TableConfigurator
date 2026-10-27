@@ -6,7 +6,8 @@
     "start": "serve -l 3000 --no-clipboard .",
     "dev": "serve -l 3000 --no-clipboard .",
     "preview": "serve -l 3000 --no-clipboard .",
-    "pages:login": "wrangler login",
+    "cf:login": "wrangler login",
+    "cf:deploy": "wrangler deploy",
     "pages:deploy": "wrangler pages deploy . --project-name=table-visualization --commit-dirty=true"
   },
   "devDependencies": {

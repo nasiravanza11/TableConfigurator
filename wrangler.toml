@@ -1,7 +1,12 @@
-# Cloudflare Pages — static PlayCanvas publish export
-# No build step: deploy the project root as-is.
-# Do not run deploy until explicitly authorized.
+# Static site for Cloudflare (Workers Static Assets / Pages-compatible).
+# Project root is the publish output — no build step.
+# Exclude junk via .assetsignore (node_modules, git, etc.).
 
 name = "table-visualization"
 compatibility_date = "2024-10-01"
-pages_build_output_dir = "."
+
+# Required when Cloudflare runs `wrangler deploy` (not `pages deploy`)
+[assets]
+directory = "."
+# Do not use SPA fallback — missing .glb/.png must 404, not return index.html
+html_handling = "auto"
