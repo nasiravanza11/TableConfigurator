@@ -1,0 +1,28 @@
+# Cloudflare Pages headers for PlayCanvas static hosting
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Long-cache hashed/versioned binary assets
+/files/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/playcanvas-stable.min.js
+  Cache-Control: public, max-age=86400
+
+# Keep HTML/config/scripts fresher for UI updates
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/__*.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/files/ui/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/config.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/1320870.json
+  Cache-Control: public, max-age=0, must-revalidate

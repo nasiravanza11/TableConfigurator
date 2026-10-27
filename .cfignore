@@ -1,0 +1,11 @@
+node_modules/
+.wrangler/
+.git/
+.gitignore
+.cfignore
+package-lock.json
+package.json
+*.log
+.DS_Store
+.cache/
+.cursor/
