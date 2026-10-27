@@ -8,5 +8,5 @@ compatibility_date = "2024-10-01"
 # Required when Cloudflare runs `wrangler deploy` (not `pages deploy`)
 [assets]
 directory = "."
-# Do not use SPA fallback — missing .glb/.png must 404, not return index.html
-html_handling = "auto"
+# Valid: auto-trailing-slash | force-trailing-slash | drop-trailing-slash | none
+html_handling = "auto-trailing-slash"
