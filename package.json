@@ -1,13 +1,14 @@
 {
   "name": "table-visualization",
   "private": true,
-  "description": "Static PlayCanvas Table Visualization — local serve + Cloudflare Pages deploy config (deploy only when authorized).",
+  "description": "Static PlayCanvas Table Visualization — local serve + Cloudflare Pages.",
   "scripts": {
     "start": "serve -l 3000 --no-clipboard .",
     "dev": "serve -l 3000 --no-clipboard .",
     "preview": "serve -l 3000 --no-clipboard .",
+    "build": "node -e \"console.log('Static site — no build step')\"",
     "pages:login": "wrangler login",
-    "pages:deploy": "wrangler pages deploy . --project-name=table-visualization --commit-dirty=true"
+    "deploy": "wrangler pages deploy . --project-name=table-visualization --commit-dirty=true"
   },
   "devDependencies": {
     "serve": "^14.2.4",
